@@ -2,7 +2,7 @@ name: <+stage.variables.name>
 replicas: 2
 
 image: <+artifact.image>
-# dockercfg: <+artifact.imagePullSecret>
+dockercfg: <+artifact.imagePullSecret>
 
 createNamespace: true
 namespace: <+infra.namespace>
@@ -23,6 +23,6 @@ serviceTargetPort: 80
 # Both are added to the container environment in podSpec as envFrom source.
 env:
   config:
-    key1: value10
+    key1: value1
   secrets:
     key2: value2
